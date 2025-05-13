@@ -53,3 +53,19 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+
+# 2. Install project dependencies
+pip install -r requirements.txt
+
+# 3. Apply database migrations
+python manage.py migrate
+
+# 4. (Optional) Create a superuser to access the Django admin panel
+python manage.py createsuperuser
+
+# 5. Run the development server
+python manage.py runserver
+
+# 6. Open the project in your browser
+# Visit:
+http://127.0.0.1:8000/

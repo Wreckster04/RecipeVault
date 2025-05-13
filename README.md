@@ -39,8 +39,8 @@ Make sure you have the following installed:
 
 ### 📦 Installation Steps
 # 1. Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Wreckster04/RecipeVault.git
+cd RecipeVault
 
 # 2. Install project dependencies
 pip install -r requirements.txt

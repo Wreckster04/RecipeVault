@@ -1,0 +1,52 @@
+{% extends "base1.html" %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <form action="/search">
+            <label style="font-size: larger;" for="">Search Recipe:</label>
+            <input type="text" id="search" placeholder="Search by recipe name" class="form-control" name="search">
+            <button type="submit" class="btn btn-primary mt-2" id="searchBtn">Search</button>
+        </form>
+
+    </div>
+        <h1>Recipe List</h1>
+        <table class="table table-striped">  <!-- Added Bootstrap table classes -->
+            <thead>
+                <tr>
+                    <th>S.no.</th>
+                    <th>Recipe Name</th>
+                    <th>Recipe description</th>
+                    <th>Recipe image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if message %}
+            <div class="alert alert-danger" role="alert">
+                {{ message }}
+            </div>
+            {% endif %}
+            {% for recipe in fulldata %}
+            <tr>
+                <td>{{ forloop.counter }}</td>  <!-- Added S.no. counter -->
+                <td>{{recipe.recipe_name}}</td>
+                <td style="max-width: 500px;">{{recipe.recipe_desc}}</td>
+                <td><img src="media/{{recipe.recipe_image}}" style="height:200px"></td>
+                <td>
+                    <a class="btn btn-danger" href="/delete/{{recipe.id}}">Delete</a>
+                    <a class="btn btn-success" href="/update/{{recipe.id}}">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="text-center">
+
+    <button class="btn btn-success">
+        
+        <a href="/recipes" style="color: white;" >Add a Recipe</a>
+    </button>
+</div>
+{% endblock %}

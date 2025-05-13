@@ -1,0 +1,41 @@
+{%extends "base1.html"%}
+{%block content%}
+<form method="post">
+    {% csrf_token %}
+    {%for message in messages%}
+    <div class="alert alert-danger" role="alert">
+        <h1>{{message}}</h1>
+    
+    </div>
+    {%endfor%}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name" name="first_name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name" name="last_name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" name="username">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" name="password">
+    </div>
+    <div>
+        <input type="submit" class="btn btn-primary" value="Sign Up">
+    </div>
+    <div>
+        <h5>
+
+            Already have an account? 
+        </h5>
+        <a href="/login">
+            Sign In
+        </a>
+    </div>
+    
+</form>
+{%endblock%}

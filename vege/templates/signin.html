@@ -1,0 +1,30 @@
+{%extends "base1.html"%}
+{%block content%}
+<form method="post">
+    {% csrf_token %}
+    {%for message in messages%}
+    <div>
+    <h5>{{message}}</h5>
+</div>
+{%endfor%}
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Username
+    </label>
+    <input type="username" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="username">
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" name="password">
+</div>
+<div>
+    <input type="submit" class="btn btn-primary" value="Sign In">
+</div>
+<div>
+    <h5>
+        Don't have an account?
+    </h5>
+    <a href="/signup">
+        Sign Up
+    </a>
+</form>
+{%endblock%}

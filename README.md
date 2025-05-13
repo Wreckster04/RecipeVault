@@ -43,15 +43,12 @@ Make sure you have the following installed:
 
 - Python 3.8+
 - pip
-- virtualenv *(optional but recommended)*
 
 ---
 
 ### 📦 Installation Steps
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/your-repo-name.git
+# 1. Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 
 # 2. Install project dependencies
@@ -66,6 +63,3 @@ python manage.py createsuperuser
 # 5. Run the development server
 python manage.py runserver
 
-# 6. Open the project in your browser
-# Visit:
-http://127.0.0.1:8000/

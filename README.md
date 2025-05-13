@@ -25,15 +25,6 @@ A simple yet powerful web application built with **Django** that allows users to
 
 ---
 
-## 📸 Screenshots *(optional)*
-
-> Add images if you'd like. Example:
-> - Home page
-> - Recipe list
-> - Create/Edit form
-> - Login/Register
-
----
 
 ## 🏁 Getting Started
 

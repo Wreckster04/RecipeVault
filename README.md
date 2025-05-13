@@ -57,9 +57,9 @@ pip install -r requirements.txt
 # 3. Apply database migrations
 python manage.py migrate
 
-# 4. (Optional) Create a superuser to access the Django admin panel
-python manage.py createsuperuser
-
 # 5. Run the development server
 python manage.py runserver
+
+# 6. Now open your browser and go to:
+http://127.0.0.1:8000/
 

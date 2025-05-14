@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=yjs+7rc7(%v-(w9$wcyb7z1ia3bo(oxc)e*qzrn@+u!-v$9ga
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['recipevault-9voa.onrender.com']
 
 
 # Application definition

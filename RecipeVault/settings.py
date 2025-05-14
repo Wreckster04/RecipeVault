@@ -29,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://recipevault-9voa.onrender.com"
+    "https://web-production-7249.up.railway.app/"
 ]
 # Application definition
 

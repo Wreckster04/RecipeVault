@@ -18,7 +18,8 @@ def create(request):
         Recipe.objects.create(
             recipe_name = name,
             recipe_desc = desc,
-            recipe_image = image
+            recipe_image = image,
+            user = request.user
         )
         return redirect('/recipes')
             
@@ -26,7 +27,8 @@ def create(request):
     return render(request, "recipes.html")
 @login_required(login_url='/login')
 def read(request):
-    data = Recipe.objects.filter(user = request.user)
+    user = request.user
+    data = Recipe.objects.filter(user = user)
     context = {'fulldata':data}
     return render(request,"display.html",context)
 @login_required(login_url='/login')
